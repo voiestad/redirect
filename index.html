@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+</head>
+
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div style="text-align: center;">
+            <h3>Redirecting...</h3>
+        </div>
+    </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const to = params.get("to");
+        if (to) {
+            window.location.href = to;
+        } else {
+            document.querySelector("h3").textContent = "No redirect URL specified...";
+        }
+    </script>
+</body>
+
+</html>
